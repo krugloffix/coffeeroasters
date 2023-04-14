@@ -4,7 +4,7 @@
 
 <p><b>CoffeeRoasters</b> website is an online platform allows users to create a subscribe to get fresh coffee of their liking.</p>
 
-👉 Live Demo: <a href=''>CoffeeRoasters Demo</a>
+👉 Live Demo: <a href='https://coffeeroasters-irinakruglova.vercel.app/'>CoffeeRoasters Demo</a>
 
 <h3>Build with:</h3>
 
