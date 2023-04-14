@@ -1,0 +1,64 @@
+@import 'imports'
+
+html
+    box-sizing: border-box
+    scroll-behavior: smooth
+
+*,
+*::before,
+*::after
+    box-sizing: inherit
+
+body
+    max-width: 90%
+    margin: 0 auto
+    background-color: $color-lightCream
+    font-family: $font-barlow
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 26px
+
+a
+    color: inherit
+    text-decoration: none
+
+img
+    max-width: 100%
+
+h1, h2, h3, h4
+    font-family: $font-fraunces
+    font-style: normal
+    font-weight: 900
+
+.visually-hidden
+    position: fixed
+    transform: scale(0)
+
+.container
+    display: grid
+    grid-template-columns: repeat(12, 65px)
+    gap: 30px
+    justify-content: center
+
+.main__btn
+    min-width: 220px
+    display: inline-block
+    padding: 15px 20px
+    background: #0E8784
+    border: none
+    border-radius: 6px
+    font-family: $font-fraunces
+    font-weight: 900
+    font-size: 18px
+    line-height: 25px
+    text-align: center
+    color: $color-lightCream
+    cursor: pointer
+    transition: background .3s linear
+    &:hover
+        @media (min-width: 768px)
+            background: #66D2CF
+    &:active
+        @media (min-width: 768px)
+            background: darken($color-darkCyan, 10)

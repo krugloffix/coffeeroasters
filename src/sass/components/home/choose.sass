@@ -1,0 +1,57 @@
+.home
+    .choose
+        margin-bottom: 300px
+        background: #2C343E
+        border-radius: 10px
+        &__container
+            grid-template-rows: repeat(3, fit-content(100%))
+            padding: 100px 0 320px
+        &__title
+            grid-column: 1 / 13
+            margin: 0 0 30px
+            font-size: 40px
+            line-height: 48px
+            text-align: center
+            color: $color-lightCream
+        &__text
+            grid-column: 1 / 13
+            margin: 0 auto
+            width: 540px
+            text-align: center
+            color: $color-lightCream
+            opacity: 0.8
+        &__inner
+            grid-column: 1 / 13
+            position: relative
+        &__list
+            margin: 0
+            padding: 0
+            position: absolute
+            top: 86px
+            left: 50%
+            transform: translateX(-50%)
+            display: grid
+            grid-template-columns: repeat(3, 350px)
+            gap: 30px
+            list-style-type: none
+        &__item
+            padding: 72px 48px 48px
+            display: grid
+            grid-template-rows: repeat(3, fit-content(100%))
+            justify-items: center
+            background: $color-darkCyan
+            border-radius: 8px
+        &__img
+            width: 72px
+            height: 72px
+            margin-bottom: 56px
+        &__name
+            margin: 0 0 24px
+            font-size: 24px
+            line-height: 32px
+            text-align: center
+            color: $color-lightCream
+        &__description
+            margin: 0
+            text-align: center
+            color: $color-lightCream

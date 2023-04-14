@@ -1,0 +1,85 @@
+.user
+    position: relative
+    &__plan
+        margin-bottom: 50px
+        padding: 30px 60px
+        display: grid
+        justify-items: start
+        border-radius: 10px
+        background-color: #2C343E
+    &__title
+        margin: 0 0 10px
+        font-family: $font-barlow
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 26px
+        text-transform: uppercase
+        color: #FFFFFF
+        opacity: 0.5
+    &__summary
+        p
+            font-family: $font-fraunces
+            font-weight: 900
+            font-size: 24px
+            line-height: 40px
+            color: #FFFFFF
+        span
+            color: $color-darkCyan
+    &__delivery
+        padding: 30px 60px
+        display: grid
+        justify-items: start
+        border-radius: 10px
+        background-color: #2C343E
+        p
+            font-family: $font-fraunces
+            font-weight: 900
+            font-size: 24px
+            line-height: 40px
+            color: #FFFFFF
+        span
+            color: $color-darkCyan
+    &__date
+        font-family: $font-fraunces
+        font-weight: 900
+        font-size: 24px
+        line-height: 40px
+        color: #FFFFFF
+        span
+            color: $color-darkCyan
+    &__signout
+        z-index: 10
+        position: absolute
+        top: 20px
+        right: 20px
+        border: none
+        background: transparent
+        color: $color-lightCream
+        cursor: pointer
+    &__btns
+        margin-top: 50px
+        display: grid
+        grid-template-columns: repeat(2, fit-content(100%))
+        gap: 30px
+    &__delete
+        min-width: 220px
+        display: inline-block
+        padding: 15px 20px
+        background: #700707
+        border: none
+        border-radius: 6px
+        font-family: $font-fraunces
+        font-weight: 900
+        font-size: 18px
+        line-height: 25px
+        text-align: center
+        color: $color-lightCream
+        cursor: pointer
+        transition: background .3s linear
+        &:hover
+            @media (min-width: 768px)
+                background: lighten(#700707, 15%)
+        &:active
+            @media (min-width: 768px)
+                background: darken($color-darkCyan, 10)

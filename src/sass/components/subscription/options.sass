@@ -1,0 +1,141 @@
+.subscription
+    .options
+        margin-top: 150px
+        &__container
+            display: grid
+            grid-template-columns: fit-content(100%) 1fr
+            gap: 125px
+        &__list
+            position: sticky
+            top: 100px
+            left: 0
+        &__item
+            margin: 0
+            padding: 24px 0 24px 0
+            font-family: $font-fraunces
+            font-weight: 900
+            font-size: 24px
+            line-height: 32px
+            list-style-type: none
+            opacity: 0.4
+            cursor: pointer
+            transition: opacity .3s linear
+            span
+                color: $color-grey
+            p
+                margin: 0 0 0 23px
+                display: inline-block
+                color: $color-darkGrey
+            &:not(:last-child)::after
+                position: relative
+                bottom: -24px
+                left: 0
+                content: ""
+                display: block
+                width: 100%
+                height: 1px
+                background: $color-grey
+                opacity: 0.25
+            &:hover
+                @media (min-width: 1024px)
+                    opacity: 0.6
+            &--checked
+                span
+                    color: $color-darkCyan
+            &--disabled
+                opacity: 0.2
+                pointer-events: none
+        &__plan
+            margin: 0 0 90px
+            padding: 0
+            list-style-type: none
+        &__element
+            &--close
+                .options__answers
+                    max-height: 0px
+            &--active
+                .options__answers
+                    max-height: 250px
+                .options__question
+                    &:after
+                        transform: translateY(-50%) rotate(360deg)
+            &--disabled
+                opacity: 0.2
+                pointer-events: none
+                .options__answers
+                    max-height: 0
+        &__question
+            padding: 25px
+            font-size: 40px
+            line-height: 48px
+            color: $color-grey
+            cursor: pointer
+            position: relative
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                width: 20px
+                height: 12px
+                top: 50%
+                right: 0
+                transform: translateY(-50%) rotate(180deg)
+                mask-image: url('../../../assets/arrow.svg')
+                background-color: $color-darkCyan
+                background-position: right center
+                background-repeat: no-repeat
+                transition: background-color .3s ease-in, transform .3s ease-in
+        &__answers
+            margin: 0
+            padding: 0
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 23px
+            list-style-type: none
+            overflow: hidden
+            transition: max-height .3s ease-in-out
+        &__answer
+            padding: 30px
+            background: #F4F1EB
+            border-radius: 8px
+            transition: background .3s linear
+            cursor: pointer
+            &:hover
+                @media (min-width: 1024px)
+                    background: $color-paleOrange
+            &--checked
+                background: $color-darkCyan
+            &--disabled
+                opacity: 0.2
+                pointer-events: none
+        &__recap
+            padding: 30px 60px
+            display: grid
+            justify-items: start
+            border-radius: 10px
+            background-color: #2C343E
+        &__summary
+            p
+                font-family: $font-fraunces
+                font-weight: 900
+                font-size: 24px
+                line-height: 40px
+                color: #FFFFFF
+            span
+                color: $color-darkCyan
+        &__title
+            margin: 0 0 10px
+            font-family: $font-barlow
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 26px
+            text-transform: uppercase
+            color: #FFFFFF
+            opacity: 0.5
+        &__btn
+            justify-self: end
+            transition: background .3s linear
+            &--disabled
+                background: #E2DEDB
+                pointer-events: none

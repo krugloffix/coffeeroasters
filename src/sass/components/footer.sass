@@ -1,0 +1,49 @@
+.footer
+    margin-top: 150px
+    background: #2C343E
+    &__container
+        padding: 50px
+        display: grid
+        grid-template-columns: repeat(3, fit-content(100%))
+        justify-content: space-between
+    &__logo
+        width: 236px
+        height: 26px
+    &__list
+        margin: 0
+        padding: 0
+        display: grid
+        grid-template-columns: repeat(3, fit-content(100%))
+        gap: 33px
+        list-style-type: none
+    &__link
+        display: inline-block
+        height: 100%
+        font-weight: 700
+        font-size: 12px
+        line-height: 15px
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: $color-grey
+        transition: color .3s linear, opacity .3s linear
+        &:hover
+            @media (min-width: 768px)
+                color: $color-lightCream
+                opacity: 1
+    &__socials
+        margin: 0
+        padding: 0
+        display: grid
+        grid-template-columns: repeat(3, fit-content(100%))
+        gap: 24px
+        list-style-type: none
+    &__social
+        display: inline-block
+        width: 24px
+        height: 24px
+        mask-repeat: no-repeat
+        mask-position: center
+        background-color: #FEFCF7
+        transition: background-color .3s linear
+        &:hover
+            background-color: #FDD6BA

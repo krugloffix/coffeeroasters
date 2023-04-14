@@ -1,0 +1,38 @@
+.hero
+    margin: 45px 0 150px 0
+    min-height: 450px
+    background-size: cover
+    border-radius: 10px
+    &__inner
+        padding-left: 85px
+        max-width: 600px
+        min-height: 450px
+        display: grid
+        align-content: center
+    &__title
+        margin: 0
+        font-size: 72px
+        line-height: 72px
+        color: $color-lightCream
+    &__text
+        color: $color-lightCream
+        opacity: 0.8
+
+.subscription
+    .hero
+        background: url('../../assets/subscription/subscription_bg--desktop.png') no-repeat center
+
+.about
+    .hero
+        background: url('../../assets/about/hero--desktop.png') no-repeat center
+        @media ( max-width: 768px )
+            background: url('../../assets/about/hero--small.png') no-repeat center
+            background-size: cover
+
+.checkout
+    .hero
+        background: url('../../assets/checkout/checkout-bg.png') no-repeat center
+
+.user
+    .hero
+        background: url('../../assets/user/hero.png') no-repeat center

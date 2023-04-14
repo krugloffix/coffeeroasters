@@ -1,0 +1,98 @@
+.subscription
+    .modal
+        z-index: 11
+        animation: 500ms ease-in-out onOpen
+        &--before-close
+            animation: 500ms ease-in-out onClose
+        &__overlay
+            position: fixed
+            z-index: 20
+            top: 0
+            left: 0
+            width: 100vw
+            height: 100vh
+            background: rgba(0, 0, 0, .6)
+        &__container
+            max-width: 600px
+            padding: 0
+            position: absolute
+            z-index: 30
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            border-radius: 10px
+        &__top
+            background: $color-darkGrey
+            padding: 40px 50px
+            border-radius: 10px 10px 0 0
+        &__close
+            mask-image: url("../../../assets/close.svg")
+            width: 13px
+            height: 13px
+            z-index: 40
+            position: absolute
+            top: 20px
+            right: 20px
+            border: none
+            background-color: white
+            cursor: pointer
+        &__title
+            display: inline-block
+            margin: 0
+            font-size: 40px
+            line-height: 48px
+            color: #FFFFFF
+            border-radius: 10px 10px 0 0
+        &__bottom
+            background: $color-lightCream
+            padding: 30px
+            display: grid
+            grid-template-columns: repeat(2, fit-content(100%))
+            grid-template-rows: repeat(3, fit-content(100%))
+            align-items: center
+            justify-items: center
+        &__summary
+            grid-column: 1 / 3
+            margin: 0 0 10px
+            padding: 0
+            border-radius: 10px
+            p
+                margin: 0
+                font-family: $font-fraunces
+                font-weight: 900
+                font-size: 24px
+                line-height: 40px
+                color: #83888F
+            span
+                color: $color-darkCyan
+        &__text
+            grid-column: 1 / 3
+            margin: 0 0 50px
+            padding: 0
+            font-family: $font-barlow
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 26px
+            color: #333D4B
+            opacity: 0.8
+        &__price
+            margin: 0
+            font-family: $font-fraunces
+            font-weight: 900
+            font-size: 32px
+            line-height: 36px
+            color: #333D4B
+        &__btn
+
+@keyframes onOpen
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes onClose
+    0%
+        opacity: 1
+    100%
+        opacity: 0

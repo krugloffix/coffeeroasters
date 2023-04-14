@@ -1,0 +1,61 @@
+.checkout
+    .form
+        &__title
+            margin: 0 0 32px
+            font-size: 40px
+            line-height: 48px
+            color: $color-darkGrey
+        &__summary
+            margin-bottom: 100px
+            padding: 30px 60px
+            display: grid
+            justify-items: start
+            border-radius: 10px
+            background-color: #2C343E
+            p
+                margin-bottom: 0
+                font-family: $font-fraunces
+                font-weight: 900
+                font-size: 24px
+                line-height: 40px
+                color: #FFFFFF
+            span
+                color: $color-darkCyan
+        &__main
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(2, fit-content(100%))
+            justify-items: center
+            align-items: end
+            gap: 30px
+            div
+                display: flex
+                flex-direction: column
+                border-radius: 10px
+                input, select
+                    padding: 10px
+                    border-radius: 10px
+                    border: 1px solid $color-grey
+                    transition: outline .3s linear
+                    &:focus
+                        outline: 1px solid $color-darkGrey
+                    &:not(:last-child)
+                        margin-bottom: 20px
+                label
+                    margin-bottom: 10px
+                    text-transform: uppercase
+                    color: $color-grey
+        &__btn
+            grid-column: 3 / 4
+            grid-row: 2 / 3
+        &__name
+            margin: 0 0 30px
+            font-size: 22px
+            line-height: 30px
+            color: $color-darkGrey
+            text-transform: uppercase
+        &__error
+            display: inline-block
+            margin-top: 15px
+            color: rgb(167, 13, 13)
+            text-align: center

@@ -1,0 +1,83 @@
+.work
+    &__container
+        grid-template-rows: repeat(3, fit-content(100%))
+        justify-items: start
+    &__title
+        grid-column: 1 / 13
+        margin: 0 0 178px
+        font-size: 24px
+        line-height: 32px
+        color: #83888F
+    &__inner
+        grid-column: 1 / 13
+    &__list
+        margin: 0 0 64px
+        padding: 0
+        display: grid
+        grid-template-columns: repeat(3, 285px)
+        gap: 95px
+        list-style-type: none
+    &__item
+        position: relative
+        &:before,
+        &:after
+            content: ""
+            display: block
+            position: absolute
+        &:before
+            top: -67px
+            width: 30px
+            height: 30px
+            border-radius: 50%
+            border: 2px solid $color-darkCyan
+        &:not(:last-child)
+            &:after
+                top: calc( -67px + 15px )
+                left: 30px
+                width: calc( 100% + 95px - 30px )
+                height: 1px
+                background: $color-paleOrange
+    &__number
+        margin: 0 0 38px
+        display: inline-block
+        font-family: $font-fraunces
+        font-weight: 900
+        font-size: 72px
+        line-height: 72px
+        color: $color-paleOrange
+    &__name
+        margin: 0 0 42px
+        padding: 0 30px 0 0
+        font-size: 32px
+        line-height: 36px
+        color: $color-darkGrey
+    &__description
+        margin: 0
+        color: $color-darkGrey
+    &__btn
+        grid-column: 1 / 13
+
+.subscription
+    .work
+        padding: 150px 0 100px 0
+        background: #2C343E
+        border-radius: 10px
+        &__title
+            position: fixed
+            transform: scale(0)
+        &__list
+            margin: 0
+        &__item
+            &:not(:last-child)
+                &:after
+                    top: calc( -67px + 15px )
+                    left: 15px
+                    width: calc( 100% + 95px )
+                    height: 1px
+                    background: $color-paleOrange
+        &__name
+            color: $color-lightCream
+        &__description
+            color: $color-lightCream
+        &__btn
+            display: none

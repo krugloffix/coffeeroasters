@@ -1,0 +1,36 @@
+.about
+    .headquarters
+        &__container
+            display: grid
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(2, fit-content(100%))
+            justify-content: center
+        &__title
+            margin: 0 0 70px
+            font-size: 24px
+            line-height: 32px
+            color: #83888F
+        &__list
+            margin: 0
+            padding: 0
+            display: grid
+            grid-template-columns: repeat(3, 285px)
+            justify-content: center
+            gap: 95px
+            list-style-type: none
+        &__item
+            width: 100%
+        &__img
+            width: 50px
+            height: 50px
+            margin-bottom: 45px
+        &__name
+            margin: 0 0 24px
+            font-size: 32px
+            line-height: 36px
+            color: $color-darkGrey
+        &__text
+            margin: 0
+            color: $color-darkGrey
+            &:not(:last-child)
+                margin-bottom: 10px

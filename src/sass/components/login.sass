@@ -1,0 +1,76 @@
+.login
+    z-index: 11
+    animation: 500ms ease-in-out onOpen
+    &--before-close
+        animation: 500ms ease-in-out onClose
+    &__overlay
+        position: fixed
+        z-index: 20
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        background: rgba(0, 0, 0, .6)
+    &__container
+        width: 320px
+        padding: 0 20px 20px
+        position: absolute
+        z-index: 30
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        border: 1px solid $color-darkGrey
+        border-radius: 10px
+        background: $color-lightCream
+    &__title
+        margin: 40px 0 20px 0
+        font-weight: 700
+        font-size: 20px
+        letter-spacing: 1px
+        text-transform: uppercase
+        text-align: center
+    &__close
+        position: absolute
+        top: 20px
+        right: 20px
+        border: none
+        background-color: transparent
+        cursor: pointer
+    form
+        display: grid
+        grid-template-rows: repeat(4, fit-content(100%))
+        input
+            margin-bottom: 15px
+            padding: 10px
+            border-radius: 10px
+            border: 1px solid $color-darkCyan
+            transition: outline .3s linear
+            &:focus
+                outline: 1px solid $color-darkGrey
+        p
+            margin: 20px 0 0
+            text-align: center
+    &__btn
+        display: inline-block
+        margin-left: 10px
+        text-transform: uppercase
+        font-weight: 700
+        color: $color-darkCyan
+        cursor: pointer
+    &__error
+        display: inline-block
+        margin-bottom: 15px
+        color: #a70d0d
+        text-align: center
+
+@keyframes onOpen
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes onClose
+    0%
+        opacity: 1
+    100%
+        opacity: 0

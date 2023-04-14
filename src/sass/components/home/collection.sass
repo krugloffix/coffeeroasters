@@ -1,0 +1,46 @@
+.home
+    .collection
+        margin-bottom: 150px
+        &__container
+            grid-template-rows: repeat(2, fit-content(100%))
+        &__title
+            grid-column: 1 / 13
+            margin: 0
+            text-align: center
+            position: relative
+            z-index: 5
+            font-weight: 900
+            font-size: 150px
+            line-height: 120px
+            background-color: $color-grey
+            background-image: -webkit-linear-gradient(-90deg, rgba(254, 252, 247, 0.4) 0%, $color-lightCream 100%)
+            background-size: 100%
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            text-transform: lowercase
+        &__list
+            grid-column: 1 / 13
+            margin: 0
+            padding: 0
+            position: relative
+            top: -40px
+            display: grid
+            grid-template-columns: repeat(4, 255px)
+            gap: 30px
+            justify-content: center
+            list-style-type: none
+            z-index: 10
+        &__img
+            width: 255px
+            height: 190px
+            margin-bottom: 70px
+        &__name
+            margin: 0 0 25px
+            font-size: 24px
+            line-height: 32px
+            color: $color-darkGrey
+            text-align: center
+        &__description
+            margin: 0
+            color: $color-darkGrey
+            text-align: center

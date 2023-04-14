@@ -1,0 +1,471 @@
+@media ( max-width: 1440px )
+    .container
+        grid-template-columns: repeat(10, 1fr)
+    .hero
+        &__container
+            position: relative
+        &__overlay
+            z-index: 5
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: rgba(0, 0, 0, 0.600551)
+            border-radius: 10px
+        &__inner
+            position: relative
+            z-index: 10
+    .home
+        .intro
+            &__container
+                position: relative
+            &__overlay
+                z-index: 5
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background: rgba(0, 0, 0, 0.600551)
+                border-radius: 10px
+            &__inner
+                position: relative
+                z-index: 10
+        .collection
+            &__title
+                grid-column: 1 / 11
+            &__list
+                top: -20px
+                grid-column: 1 / 11
+                grid-template-columns: repeat(2, 255px)
+                gap: 35px
+        .choose
+            &__title
+                grid-column: 1 / 11
+            &__text
+                grid-column: 1 / 11
+            &__inner
+                grid-column: 1 / 11
+            &__list
+                grid-template-columns: repeat(3, 260px)
+            &__item
+                padding: 72px 20px 48px
+    .work
+        &__title
+            grid-column: 1 / 11
+        &__inner
+            grid-column: 1 / 11
+        &__btn
+            grid-column: 1 / 11
+    .about
+        .commitment
+            &__container
+                gap: 65px
+                justify-content: space-between
+        .quality
+            &__container
+                gap: 65px
+                justify-content: space-evenly
+        .headquarters
+            &__list
+                gap: 15px
+                justify-content: space-between
+    .subscription
+        .work
+            &__container
+                padding: 0 50px
+        .modal
+            &__bottom
+                column-gap: 20px
+
+@media ( max-width: 1255px )
+    .subscription
+        .work
+            &__list
+                grid-template-columns: repeat(3, 250px)
+
+@media ( max-width: 1170px )
+    .work
+        &__list
+            grid-template-columns: repeat(3, 250px)
+    .subscription
+        .work
+            &__list
+                grid-template-columns: repeat(3, 200px)
+        .options
+            &__list
+                display: none
+            &__container
+                display: block
+            &__element--active .options__answers
+                max-height: 400px
+
+@media ( max-width: 1024px )
+    .footer
+        &__container
+            padding: 50px 30px
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(3, fit-content(100%))
+            justify-items: center
+        &__logo
+            margin-bottom: 35px
+        &__list
+            margin-bottom: 65px
+    .home
+        .collection
+            margin-bottom: 100px
+            &__title
+                font-size: 96px
+                line-height: 72px
+            &__list
+                grid-template-columns: repeat(2, 255px)
+        .choose
+            margin-bottom: 600px
+            &__container
+                padding: 100px 0 370px
+            &__list
+                top: 70px
+                grid-template-columns: 580px
+                gap: 25px
+            &__item
+                padding: 40px 40px 40px 70px
+                grid-template-columns: repeat(2, fit-content(100%))
+                grid-template-rows: repeat(2, fit-content(100%))
+                gap: 55px
+                align-items: center
+                justify-items: center
+            &__img
+                grid-row: 1 / 3
+                margin: 0
+    .work
+        &__list
+            grid-template-columns: repeat(3, 250px)
+            gap: 10px
+        &__item:not(:last-child):after
+            width: calc(100% + 95px - 115px)
+    .subscription
+        .work
+            &__list
+                grid-template-columns: repeat(3, 250px)
+                gap: 10px
+            &__item:not(:last-child):after
+                width: calc(100% + 95px - 85px)
+    .about
+        .commitment
+            margin-bottom: 305px
+        .quality
+            padding: 50px
+            &__container
+                grid-template-columns: 1fr
+                grid-template-rows: 160px fit-content(100%)
+            &__inner
+                text-align: center
+                max-width: none
+            &__title
+                font-size: 32px
+                line-height: 48px
+            &__img
+                width: 100%
+                height: 320px
+                top: -50%
+                grid-row: 1 / 2
+                object-fit: cover
+        .headquarters
+            &__list
+                grid-template-columns: repeat(3, 220px)
+
+@media ( max-width: 980px )
+    .subscription
+        .work
+            &__list
+                grid-template-columns: repeat(3, 210px)
+
+@media ( max-width: 860px )
+    .header
+        &__nav
+            gap: 15px
+        &__login
+            margin-left: 15px
+    .work
+        &__container
+            justify-items: center
+        &__title
+            margin-bottom: 80px
+        &__list
+            grid-template-columns: 1fr
+        &__item
+            text-align: center
+            max-width: 400px
+            &:before
+                display: none
+            &::after
+                display: none
+            &:not(:last-child)
+                margin-bottom: 55px
+        &__name
+            padding: 0
+    .subscription
+        .work
+            &__list
+                grid-template-columns: 1fr
+
+@media ( max-width: 768px )
+    .container
+        grid-template-columns: repeat(6, 1fr)
+    .header
+        &__nav
+            gap: 30px
+        &__link
+            text-align: left
+        &__login
+            margin: 30px 0 0 0
+            text-align: left
+    .hero
+        &__inner
+            padding: 0 50px
+        &__title
+            font-size: 48px
+            line-height: 48px
+    .home
+        .intro
+            background: url('../assets/home/hero--tablet.png') no-repeat right
+            background-size: cover
+            &__inner
+                padding: 25px 50px
+                max-width: 400px
+            &__title
+                font-size: 48px
+                line-height: 48px
+            &__text
+                font-size: 15px
+                line-height: 25px
+        .collection
+            &__title
+                grid-column: 1 / 7
+            &__list
+                grid-column: 1 / 7
+                grid-template-columns: 1fr
+                justify-items: center
+            &__item
+                display: grid
+                grid-template-columns: 220px 280px
+                grid-template-rows: repeat(2, fit-content(100%))
+                align-items: center
+            &__img
+                width: 220px
+                grid-row: 1 / 3
+                margin: 0
+            &__name
+                margin: 0
+            &__description
+                align-self: start
+        .choose
+            margin-bottom: 850px
+            &__container
+                padding: 100px 0 700px
+            &__title
+                grid-column: 1 / 7
+                font-size: 28px
+                line-height: 28px
+            &__text
+                margin: 0 20px
+                width: auto
+                grid-column: 1 / 7
+                font-size: 15px
+                line-height: 25px
+            &__inner
+                grid-column: 1 / 7
+            &__list
+                grid-template-columns: 260px
+            &__item
+                padding: 70px 10px 50px 10px
+                grid-template-columns: 1fr
+                grid-template-rows: repeat(3, fit-content(100%))
+            &__description
+                font-size: 15px
+                line-height: 25px
+    .work
+        &__title
+            grid-column: 1 / 7
+        &__inner
+            grid-column: 1 / 7
+        &__btn
+            grid-column: 1 / 7
+    .about
+        .commitment
+            &__container
+                grid-template-columns: 1fr
+                justify-items: center
+                gap: 50px
+                text-align: center
+            &__inner
+                padding: 0 15px
+        .headquarters
+            &__title
+                text-align: center
+            &__list
+                grid-template-columns: 285px
+                justify-items: center
+                justify-content: center
+                gap: 80px
+            &__item
+                text-align: center
+            &__name
+                font-size: 24px
+                line-height: 36px
+    .subcription
+        .options
+            &__question
+                font-size: 32px
+                line-height: 48px
+    .checkout
+        .form
+            &__main
+                grid-template-columns: repeat(2, 1fr)
+            &__btn
+                grid-column: 2 / 3
+
+@media ( max-width: 660px )
+    .subscription
+        .options
+            &__answers
+                grid-template-columns: 1fr
+            &__element--active .options__answers
+                max-height: 700px
+
+@media ( max-width: 560px )
+    .home
+        .collection
+            &__title
+                font-size: 60px
+                line-height: 72px
+            &__list
+                top: 0
+            &__item
+                grid-template-columns: 1fr
+                grid-template-rows: repeat(3, fit-content(100%))
+                justify-items: center
+                gap: 20px
+                &:not(:last-child)
+                    margin-bottom: 50px
+            &__description
+                max-width: 280px
+    .subscription
+        .modal
+            &__container
+                max-width: none
+                width: 90%
+            &__bottom
+                grid-template-columns: 1fr
+                column-gap: 0
+    .checkout
+        .form
+            &__main
+                grid-template-columns: 1fr
+                div
+                    width: 100%
+            &__btn
+                grid-column: 1 / 2
+                grid-row: 3 / 4
+    .user
+        &__btns
+            grid-template-columns: 1fr
+@media ( max-width: 425px )
+    .container
+        grid-template-columns: repeat(2, 1fr)
+    .hero
+        &__inner
+            padding: 0 25px
+            text-align: center
+        &__title
+            font-size: 40px
+            line-height: 40px
+    .footer
+        &__container
+            padding: 50px 15px
+        &__list
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(3, fit-content(100%))
+            gap: 24px
+            justify-items: center
+    .home
+        .intro
+            min-height: 500px
+            background: url('../assets/home/hero--mobile.png') no-repeat right
+            background-size: cover
+            &__inner
+                padding: 25px
+                max-width: none
+                min-height: 500px
+            &__inner
+                text-align: center
+            &__title
+                font-size: 40px
+                line-height: 40px
+            &__text
+                opacity: 0.8
+            &__btn
+                justify-self: center
+        .collection
+            &__title
+                grid-column: 1 / 3
+                font-size: 40px
+            &__list
+                grid-column: 1 / 3
+        .choose
+            &__title
+                grid-column: 1 / 3
+            &__text
+                grid-column: 1 / 3
+            &__inner
+                grid-column: 1 / 3
+    .work
+        &__title
+            grid-column: 1 / 3
+        &__inner
+            grid-column: 1 / 3
+        &__btn
+            grid-column: 1 / 3
+    .about
+        .commitment
+            margin-bottom: 180px
+            &__title
+                font-size: 32px
+                line-height: 48px
+        .quality
+            &__container
+                grid-template-rows: 80px fit-content(100%)
+            &__title
+                font-size: 28px
+                line-height: 28px
+            &__img
+                width: 280px
+                height: 160px
+                object-position: bottom
+        .headquarters
+            &__name
+                font-size: 28px
+                line-height: 36px
+    .subscription
+        .work
+            &__container
+                padding: 0 25px
+        .options
+            &__question
+                font-size: 24px
+                line-height: 28px
+            &__element--active .options__answers
+                max-height: 800px
+            &__recap
+                padding: 30px
+        .modal
+            &__title
+                font-size: 28px
+                line-height: 32px
+    .user
+        .hero
+            &__inner
+                padding: 0
+            &__text
+                padding: 0 15px
